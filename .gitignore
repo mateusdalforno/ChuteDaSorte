@@ -4,3 +4,5 @@
 *.jar
 *.war
 *.ear
+/ChuteDaSorte/nbproject/private/
+/ChuteDaSorte/build/
