@@ -1,4 +1,3 @@
-
 package chutedasorte;
 
 import baralho.Baralho;
@@ -7,11 +6,11 @@ import java.util.regex.Pattern;
 
 /**
  * Classe que executa o jogo "chute da Sorte"
+ *
  * @author Mateus
  */
 public class Jogo {
 
-    
     private String opcao;
     Scanner teclado = new Scanner(System.in);
 
@@ -19,10 +18,12 @@ public class Jogo {
      * Metodo construtor da Classe Jogo.
      */
     public Jogo() {
-//        this.menu();
 
     }
 
+    /**
+     * Metodo que chama o menu do jogo
+     */
     public void menu() {
 
         opcao = "";
@@ -73,7 +74,6 @@ public class Jogo {
         jogador.setNome(nome);
 
         Baralho baralho = new Baralho();
-//        System.out.println("chegou aqui");
         baralho.embaralhar();
         String valor;
         String naipe;
@@ -82,8 +82,6 @@ public class Jogo {
             System.out.println("-------------------------------");
             System.out.println("Rodada " + j);
             jogador.setCarta(baralho.getPrimeiraCarta());
-
-//            System.out.println(jogador.verValor());
 
             System.out.println("CARTA SELECIONADA!");
 
@@ -105,9 +103,7 @@ public class Jogo {
             if (naipe.equals("Q")) {
                 break;
             }
-            //String valorReal = jogador.verValor();
             String valorReal[] = jogador.verValor().split(Pattern.quote(", "));
-//            System.out.println(valorReal[1]);
 
             if (valor.equals(valorReal[0]) && naipe.equals(valorReal[1])) {
                 jogador.setDoisPontos();
