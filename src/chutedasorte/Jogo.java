@@ -36,7 +36,7 @@ public class Jogo {
         System.out.println("2 - Regras");
         System.out.println("Q - Sair");
         System.out.println();
-        System.out.print("Digite uma opção: ");
+        System.out.print("Digite uma opcao: ");
         opcao = teclado.next();
 
         opcao = opcao.toUpperCase();
@@ -52,13 +52,13 @@ public class Jogo {
             }
             case "Q": {
                 System.out.println("==================================================");
-                System.out.println(" Obrigado por jogar o jogo. Até a próxima! ");
+                System.out.println(" Obrigado por jogar o jogo. Ate a proxima! ");
                 System.out.println();
                 System.out.println();
                 System.exit(0);
             }
             default: {
-                System.out.println("Digite uma opção válida!");
+                System.out.println("Digite uma opção valida!");
                 this.menu();
             }
         }
@@ -113,7 +113,7 @@ public class Jogo {
                 jogador.setUmPonto();
             }
             System.out.println("A carta era: " + jogador.verValor());
-            System.out.println("seus pontos: " + jogador.getPonto());
+            System.out.println("Seus pontos: " + jogador.getPonto());
             j++;
         }
         System.out.println("==================================================");
@@ -127,8 +127,8 @@ public class Jogo {
         System.out.println("                REGRAS DO JOGO");
         System.out.println();
         System.out.println();
-        System.out.println("O jogo é baseado em adivinhação. O jogador deve ");
-        System.out.println("adivinhar qual é a naipe e o valor de uma de-");
+        System.out.println("O jogo e baseado em adivinhacao. O jogador deve ");
+        System.out.println("adivinhar qual e a naipe e o valor de uma de-");
         System.out.println("terminada carta que o sistema escolher.");
         System.out.println("Caso o jogador acerte o naipe e o valor, o mesmo");
         System.out.println("ganha 2 pontos, caso acerte o valor ou o naipe,");
