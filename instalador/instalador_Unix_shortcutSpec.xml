@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<shortcuts>
+    <skipIfNotSupported/>
+    <defaultCurrentUser/>
+    <programGroup defaultName="ChuteDaSorte" location="applications"/>
+    <shortcut KdeUsername="root" applications="no" desktop="yes"
+        encoding="UTF-8" initialState="normal"
+        name="Acesso direto ChuteDaSorte" programGroup="yes" startMenu="no"
+        startup="no" target="$INSTALL_PATH/ChuteDaSorte.jar" type="Application"/>
+</shortcuts>

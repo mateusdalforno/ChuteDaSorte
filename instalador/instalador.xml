@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<installation version="1.0">
+    <info>
+        <appname>Chute da Sorte</appname>
+        <appversion>1.0</appversion>
+        <appsubpath>ChuteDaSorte</appsubpath>
+        <authors>
+            <author email="mateush.dalforno@gmail.com" name="Mateus Henrique Dal Forno"/>
+        </authors>
+        <uninstaller name="Uninstaller.jar" write="yes"/>
+        <requiresjdk>no</requiresjdk>
+        <writeinstallationinformation>no</writeinstallationinformation>
+        <pack200/>
+        <run-privileged condition="izpack.windowsinstall.vista|izpack.windowsinstall.7"/>
+    </info>
+    <guiprefs height="480" resizable="yes" width="640">
+        <laf name="substance">
+            <param name="variant" value="business-blue"/>
+            <os family="windows"/>
+            <os family="unix"/>
+            <os family="mac"/>
+        </laf>
+        <modifier key="useFlags" value="yes"/>
+        <modifier key="langDisplayType" value="default"/>
+    </guiprefs>
+    <locale>
+        <langpack iso3="por"/>
+    </locale>
+    <resources>
+        <res id="InfoPanel.info" parse="yes" src="C:\Users\Mateus\Documents\NetBeansProjects\ChuteDaSorte\docs\Readme.txt"/>
+        <res id="LicencePanel.licence" parse="yes" src="C:\Users\Mateus\Documents\NetBeansProjects\ChuteDaSorte\docs\COPYING.txt"/>
+        <res id="shortcutSpec.xml" src="instalador_shortcutSpec.xml"/>
+        <res id="Unix_shortcutSpec.xml" src="instalador_Unix_shortcutSpec.xml"/>
+        <res id="installer.langsel.img" src="C:\Users\Mateus\Documents\NetBeansProjects\ChuteDaSorte\docs\baralho-4252a.jpg"/>
+    </resources>
+    <panels>
+        <panel classname="CheckedHelloPanel"/>
+        <panel classname="InfoPanel"/>
+        <panel classname="LicencePanel"/>
+        <panel classname="PacksPanel"/>
+        <panel classname="TargetPanel"/>
+        <panel classname="InstallPanel"/>
+        <panel classname="ShortcutPanel"/>
+        <panel classname="SimpleFinishPanel"/>
+    </panels>
+    <variables>
+        <variable name="DesktopShortcutCheckboxEnabled" value="true"/>
+    </variables>
+    <packs>
+        <pack name="ChuteDaSorte" preselected="yes" required="yes">
+            <description/>
+            <file override="update"
+                src="C:\Users\Mateus\Documents\NetBeansProjects\ChuteDaSorte\dist\ChuteDaSorte.jar" targetdir="$INSTALL_PATH/"/>
+        </pack>
+        <pack name="API Cartas" preselected="yes" required="yes">
+            <description/>
+            <file override="update"
+                src="C:\Users\Mateus\Documents\NetBeansProjects\ChuteDaSorte\dist\lib\apicartas-1.0.jar" targetdir="$INSTALL_PATH/lib/"/>
+        </pack>
+    </packs>
+    <native name="ShellLink.dll" type="izpack"/>
+    <native name="ShellLink_x64.dll" type="izpack"/>
+</installation>
